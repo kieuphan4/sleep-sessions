@@ -1,15 +1,17 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home'
-import Signup from './components/Signup'
-import Login from './components/Login'
-import SleepSessionsList from './components/SleepSessionsList'
-import SleepSessionsForm from './components/SleepSessionsForm'
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import SleepSessionsList from './components/SleepSessionsList';
+import SleepSessionsForm from './components/SleepSessionsForm';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
           <Route
             path="/"
