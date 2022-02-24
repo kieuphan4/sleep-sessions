@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div>
+      <h3>Sleep Track</h3>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/signup">Sign Up</Link></li>
