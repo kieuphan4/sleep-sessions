@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
@@ -8,11 +9,30 @@ import SleepSessionsForm from './components/SleepSessionsForm'
 function App() {
   return (
     <div className="App">
-      <Home />
-      <Signup />
-      <Login />
-      <SleepSessionsList />
-      <SleepSessionsForm />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}>
+          </Route>
+          <Route
+            path="/signup"
+            element={<Signup />}>
+          </Route>
+          <Route
+            path="/login"
+            element={<Login />}>
+          </Route>
+          <Route
+            path="/sleepsessions"
+            element={<SleepSessionsList />}>
+          </Route>
+          <Route
+            path="/sleepsessions/new"
+            element={<SleepSessionsForm />}>
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
